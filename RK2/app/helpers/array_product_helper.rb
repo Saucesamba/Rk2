@@ -1,0 +1,2 @@
+module ArrayProductHelper
+end

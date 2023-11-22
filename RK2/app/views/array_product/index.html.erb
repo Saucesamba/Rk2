@@ -1,0 +1,18 @@
+<p>Вариант №1 Архипов Артём ИУ6-33Б</p>
+<p>Дан массив чисел arr_n. Определить сумму
+отрицательных элементов массива и поместить ее
+на место первого нечетного элемента.</p>
+
+<h1>Введите массив чисел</h1>
+<%= form_tag(array_product_calculate_path, method: 'get') do %>
+  <label for="input_array">Массив (через запятую): </label>
+  <%= text_field_tag :input_array, @default_values.join(',') %>
+
+  <br>
+
+  <%= submit_tag 'Рассчитать' %>
+<% end %>
+
+<% if flash[:error] %>
+  <p style="color: red;"><%= flash[:error] %></p>
+<% end %>
